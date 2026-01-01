@@ -1,5 +1,5 @@
 import "./globals.css";
-import ClientProviders from "../components/ClientProviders";
+import ClientProviders from "../app/components/ClientProviders";
 
 export const metadata = {
   title: "PWA Task App",
