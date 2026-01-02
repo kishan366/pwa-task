@@ -1,45 +1,34 @@
 import "./globals.css";
-import ClientProviders from "../app/components/ClientProviders";
 import Header from "../app/components/Header";
+import BottomNav from "../app/components/BottomNav";
+import ClientProviders from "../app/components/ClientProviders";
 
 export const metadata = {
   title: "PWA Task App",
   description: "Progressive Web App using Next.js",
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: "default",
-    title: "PWA Task",
-  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* PWA Manifest */}
         <link rel="manifest" href="/manifest.json" />
-
-        {/* Theme Color */}
         <meta name="theme-color" content="#2563eb" />
-
-        {/* Viewport for Mobile */}
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1"
-        />
-
-        {/* Apple PWA Support */}
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta
-          name="apple-mobile-web-app-status-bar-style"
-          content="default"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
 
-      <body className="min-h-screen bg-gray-100 antialiased">
+      {/* pb-14 → space for bottom nav on mobile */}
+      <body className="min-h-screen bg-gray-100 pb-14 md:pb-0">
         <ClientProviders />
+
+        {/* Desktop header */}
         <Header />
+
+        {/* Page content */}
         {children}
+
+        {/* Mobile bottom nav */}
+        <BottomNav />
       </body>
     </html>
   );

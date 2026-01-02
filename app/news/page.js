@@ -32,17 +32,13 @@ export default function NewsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      {/* <header className="sticky top-0 z-10 bg-white border-b">
+      <header className="sticky top-0 z-10 bg-white border-b">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center gap-2">
-          <span className="text-2xl">📰</span>
           <h1 className="text-xl font-semibold">
             News
           </h1>
-          <span className="ml-2 text-sm text-gray-500">
-            Google News style
-          </span>
         </div>
-      </header> */}
+      </header>
 
       {/* Content */}
       <main className="max-w-7xl mx-auto px-6 py-6">
