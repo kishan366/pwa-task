@@ -1,6 +1,6 @@
 {
   "name": "PWA Task Application",
-  "short_name": "PWA Task",
+  "short_name": "NewsPWA",
   "description": "Next.js Progressive Web App",
   "start_url": "/",
   "display": "standalone",
